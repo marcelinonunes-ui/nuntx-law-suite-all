@@ -13,6 +13,13 @@ from .routers.time_entries import router as time_router
 from .routers.billing import router as billing_router
 from .routers.search import router as search_router
 from .routers.reports import router as reports_router
+from .routers.clients_attachments import router as clients_attachments_router
+from .routers.deadlines import router as deadlines_router
+from .routers.payments import router as payments_router
+
+app.include_router(clients_attachments_router)
+app.include_router(deadlines_router)
+app.include_router(payments_router)
 
 pwd = PassLib = CryptContext(schemes=["bcrypt"], deprecated="auto")
 app = FastAPI(title="N&T Law Suite API")
