@@ -31,6 +31,7 @@ from .routers.reports import router as reports_router
 from .routers.clients_attachments import router as clients_attachments_router
 from .routers.deadlines import router as deadlines_router
 from .routers.payments import router as payments_router
+from .routers.auth_compat import router as auth_compat_router
 
 # 4) regista routers
 app.include_router(auth_router)
@@ -44,6 +45,7 @@ app.include_router(reports_router)
 app.include_router(clients_attachments_router)
 app.include_router(deadlines_router)
 app.include_router(payments_router)
+app.include_router(auth_compat_router)
 
 # 5) contexto de password
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
